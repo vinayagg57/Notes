@@ -4,24 +4,37 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.nitikaaggarwal.usernotes.ListActivity">
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Notes"
-    android:layout_marginLeft="20dp"
-    android:textColor="#3E2723"
-    android:textSize="24sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="Notes"
+        android:textColor="#3E2723"
+        android:textSize="24sp" />
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginTop="12dp"
         android:background="#1f000000" />
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         android:layout_marginLeft="24dp"
-        android:layout_marginRight="18dp"/>
+        android:layout_marginRight="18dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/create_new_btn"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/btn_backgroung_orange"
+        android:text="CREATE NEW"
+        android:textColor="#ffffff"
+        android:textSize="18sp" />
+
 </LinearLayout>

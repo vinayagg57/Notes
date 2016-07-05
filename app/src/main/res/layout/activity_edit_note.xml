@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.nitikaaggarwal.usernotes.EditNoteActivity">
+
+    <EditText
+        android:id="@+id/title_edit_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:background="@android:color/transparent"
+        android:paddingRight="10dp"
+        android:text="Title"
+        android:textColor="#3E2723"
+        android:textSize="20sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <EditText
+            android:id="@+id/description_edit_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@android:color/transparent"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp"
+            android:text="dfhbkdfchwefjsdhvudb"
+            android:textColor="#795548" />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/edit_save_btn"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/btn_backgroung_orange"
+        android:text="DONE"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+
+        />
+</LinearLayout>
