@@ -43,7 +43,7 @@ public class ListActivity extends AppCompatActivity implements ListShowAdapter.O
                 startActivity(intent1);
             }
         });
-
+//finish();
     }
 
     @Override
@@ -57,10 +57,11 @@ public class ListActivity extends AppCompatActivity implements ListShowAdapter.O
     }
 
     private void passData(Note note) {
-        Intent intent = new Intent(this, ShowNoteActivity.class);
+        Intent intent = new Intent(this, EditNoteActivity.class);
         intent.putExtra("KEY_NOTE_TITLE", note.getTitle());
         intent.putExtra("KEY_NOTE_DESCRIPTION", note.getDescription());
         startActivityForResult(intent, REQUEST_CODE_NOTIFY_ORDER_ACTION);
+        finish();
     }
 
 

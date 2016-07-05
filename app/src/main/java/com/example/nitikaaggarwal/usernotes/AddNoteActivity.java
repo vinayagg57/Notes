@@ -30,17 +30,31 @@ public class AddNoteActivity extends AppCompatActivity {
                 try {
                     titleText = mTitle.getText().toString();
                     descriptionText = mDescription.getText().toString();
-                    db.addNote(new Note(titleText, descriptionText));
-                    Toast.makeText(getApplicationContext(), "Data Addaed", Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent(AddNoteActivity.this, ListActivity.class);
-                    intent.putExtra("keyName", "value");
-                    startActivity(intent);
+                    if(titleText !=null && descriptionText != null)
+                    {
+                        db.addNote(new Note(titleText, descriptionText));
+                        Toast.makeText(getApplicationContext(), "Data Addaed", Toast.LENGTH_LONG).show();
+                        Intent intent = new Intent(AddNoteActivity.this, ListActivity.class);
+                        intent.putExtra("keyName", "value");
+                        startActivity(intent);
+                        finish();
+                    }
+                   else
+                    {
+                        Toast.makeText(getApplicationContext(), "Data Not filled", Toast.LENGTH_LONG).show();
+                    }
                 } catch (Exception e) {
                     e.printStackTrace();
                     Toast.makeText(getApplicationContext(), "Please fill data", Toast.LENGTH_LONG).show();
                 }
             }
         });
+
+    }
+    public void onBackPressed() {
+        Intent intent = new Intent(AddNoteActivity.this, ListActivity.class);
+        startActivity(intent);
+        this.finish();
 
     }
 

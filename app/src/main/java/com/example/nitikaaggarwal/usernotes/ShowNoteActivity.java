@@ -37,6 +37,7 @@ Button editBtn;
                 intent.putExtra("KEY_NOTE_TITLE", title);
                 intent.putExtra("KEY_NOTE_DESCRIPTION", description);
                 startActivityForResult(intent, REQUEST_CODE_NOTIFY_ORDER_ACTION);
+                finish();
             }
         });
 
