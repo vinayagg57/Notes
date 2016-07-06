@@ -29,8 +29,6 @@ public class ListActivity extends AppCompatActivity implements ListShowAdapter.O
         createBtn = (Button) findViewById(R.id.create_new_btn);
         mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         mRecyclerView.hasFixedSize();
-
-
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(this);
         mLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         mRecyclerView.setLayoutManager(mLayoutManager);
@@ -41,9 +39,9 @@ public class ListActivity extends AppCompatActivity implements ListShowAdapter.O
             public void onClick(View v) {
                 Intent intent1 = new Intent(ListActivity.this, AddNoteActivity.class);
                 startActivity(intent1);
+                finish();
             }
         });
-//finish();
     }
 
     @Override
@@ -63,12 +61,4 @@ public class ListActivity extends AppCompatActivity implements ListShowAdapter.O
         startActivityForResult(intent, REQUEST_CODE_NOTIFY_ORDER_ACTION);
         finish();
     }
-
-
-//    private void prepareFestivalData() {
-//        for (final Note note : noteList) {
-//            noteList.add();
-//        }
-//    }
-
 }

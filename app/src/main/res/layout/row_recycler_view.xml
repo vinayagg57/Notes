@@ -3,17 +3,20 @@
     android:id="@+id/row_list"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@drawable/ripple_effect"
     android:orientation="vertical">
 
     <TextView
         android:id="@+id/title_list"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="14dp"
         android:ellipsize="end"
+        android:paddingRight="18dp"
+        android:paddingLeft="24dp"
         android:maxLines="1"
         android:text="Title"
-        android:textColor="#6D4C41"
+        android:textColor="#4E342E"
         android:textSize="18sp" />
 
     <TextView
@@ -24,14 +27,18 @@
         android:layout_marginTop="5dp"
         android:ellipsize="end"
         android:maxLines="1"
+        android:paddingRight="18dp"
+        android:paddingLeft="24dp"
         android:text="description"
-        android:textColor="#A1887F"
+        android:textColor="#8D6E63"
         android:textSize="14sp" />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="14dp"
         android:background="#1f000000" />
 
 </LinearLayout>
